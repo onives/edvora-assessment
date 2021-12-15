@@ -62,7 +62,7 @@ const HomePage = ()=>{
                 <div>
                     <h1 className='heading'>Edvora</h1>
                     <h2 className='sub-heading'>Products</h2>
-                    <h3>{filteredPdts.brand_name}</h3>
+                    <h3>Product Name</h3>
                     <hr/>
                 </div>
                 {!loading ? <CardLayout products={filteredPdts} />: <div style={{textAlign:"center"}}>Loading...</div>}
