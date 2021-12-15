@@ -1,0 +1,37 @@
+.small{
+    max-width: 228px;
+    height: auto;
+    /* margin: 1rem; */
+}
+#small{
+    padding-bottom: 2rem;
+}
+#small > .filters-title> hr{
+    color: #CBCBCB;
+}
+#navbarScrollingDropdown{
+    background-color: #232323;
+    margin: 5px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 17px;
+    width: 100%;
+    border: none;
+    text-align: left;
+}
+.dropdown-toggle::after{
+    margin-left: none;
+    float: right;
+    margin-top: 0.5em;
+}
+.filters{
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+}
+.filters-title{
+    padding: 0.5em;
+}
+.carousel-right{
+    width: 100%
+}
