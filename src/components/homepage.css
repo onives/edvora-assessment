@@ -1,4 +1,8 @@
-/* .homepage{
-    display: flex;
-    justify-content: space-around;
-} */
+body{
+    background-color: #232323;
+    color: rgba(255, 255, 255, 0.6);
+}
+.sub-heading{
+    font-size: 20px;
+    font-weight: 400;
+}

@@ -8,20 +8,20 @@ const CardLayout = ({products})=> {
 
     return(
         <DarkCard className='carousel-right'> 
-            <Carousel show={4}>
-                    {products.length && 
-                    products.map((product, index)=>(
-                        <ProductCard 
-                            key={index}
-                            image={product.image}
-                            productName={product.product_name}
-                            brandName={product.brand_name}
-                            price={product.price}
-                            location={product.address.city}
-                            date={product.date}
-                            description={product.discription}
-                    />
-                    ))}
+            <Carousel>
+                {products && products.length ?
+                products.map((product, index)=>(
+                    <ProductCard 
+                        key={index}
+                        image={product.image}
+                        productName={product.product_name}
+                        brandName={product.brand_name}
+                        price={product.price}
+                        location={product.address.city}
+                        date={product.date}
+                        description={product.discription}
+                />
+                )):null}
             </Carousel>
         </DarkCard>
         

@@ -32,10 +32,6 @@
     border-radius: 5px;
 }
 .pdt-description{
-    /* width: 183px;
-    height: 15px;
-    left: 321px;
-    top: 346px; */
     font-family: 'SF Pro Display';
     font-style: normal;
     font-weight: normal;
@@ -46,4 +42,5 @@
 }
 .pdts-layout{
     margin: 0.5em;
+    max-width: 240px;
 }

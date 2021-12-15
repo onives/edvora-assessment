@@ -4,12 +4,9 @@ import { Nav, Dropdown, DropdownButton} from 'react-bootstrap';
 import "./card-layout.css";
 import DropDownList from './DropDownList';
 
-const SideNav = ({onSelectHandler,
-     products, onBrandSelect, 
+const SideNav = ({products, onBrandSelect, 
      onStateSelect, onCitySelect,
-     onSelectionClear,
-     filteredProducts})=>{
-    // const [products, setProducts] = useState([]);
+     onSelectionClear})=>{
     const [brandNames, setBrandNames] = useState([]);
     const [cityNames, setCityNames] = useState([]);
     const [stateNames, setStateNames] = useState([]);
@@ -21,7 +18,6 @@ const SideNav = ({onSelectHandler,
         let  brand_names;
         let city_names;
         let state_names
-        let items = [];
 
         if (products.length) {
             brand_names = products.map(product => product.brand_name)

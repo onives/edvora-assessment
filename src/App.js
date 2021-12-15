@@ -9,6 +9,10 @@ function App() {
   return (
     <>
      <HomePage/>
+     {/* <div style={{border: "1px solid black", display: "flex", flex:1, flexDirection:"row"}}>
+      <div style={{flex:1, backgroundColor:"red"}}>Hiii</div>
+      <div style={{flex:3, backgroundColor:"green"}}>HJjdjdjdj</div>
+     </div> */}
     </>
   )
 }

@@ -1,43 +1,35 @@
-import React, { useState, useEffect } from 'react'
-import './carousel.css' //will be added later
+import React from 'react';
+import './carousel.css';
 
 const Carousel = (props) => {
-    const {children, show} = props
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const [length, setLength] = useState(children.length)
-
-    // Set the length to match current children from props
-    useEffect(() => {
-        console.log("$$$$$$$$$$$$$$$$", children)
-        setLength(children.length)
-    }, [children])
-
-    const next = () => {
-        if (currentIndex < (length - show)) {
-            setCurrentIndex(prevState => prevState + 1)
-        }
-    }
-    
-    const prev = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex(prevState => prevState - 1)
-        }
+    const { children } = props
+    const clickLeft = () => {
+        let container = document.querySelector('#flex-container');
+        container.scrollTo({
+            left: container.scrollLeft - 200,
+            top: 0,
+            behavior: "smooth"
+        });
     }
 
+    const clickRight = () => {
+        let container = document.querySelector('#flex-container');
+        container.scrollTo({
+            left: container.scrollLeft + 200,
+            top: 0,
+            behavior: "smooth"
+        });
+    }
     return (
-        <div className="carousel-container">
-            <div className="carousel-wrapper">
-            {currentIndex > 0 && <button className="left-arrow" onClick={prev}>
-                &lt;
-            </button>}
-                <div className="carousel-content-wrapper">
-                    <div className={`carousel-content show-${show}`} style={{ transform: `translateX(-${currentIndex * (100 / show)}%)` }}>
-                        {children}
-                    </div>
-                </div>
-                {currentIndex < (length - show) && <button className="right-arrow" onClick={next}>
+        <div class="outer">
+            <div class='flex-container' id="flex-container">
+                {children && children.length > 3 ? <button className="left-arrow" onClick={clickLeft}>
+                    &lt;
+                </button> : null}
+                {children}
+                {children && children.length > 3 ? <button className="right-arrow" onClick={clickRight}>
                     &gt;
-                </button>}
+                </button> : null}
             </div>
         </div>
     )

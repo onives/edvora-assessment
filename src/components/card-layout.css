@@ -1,7 +1,5 @@
 .small{
-    max-width: 228px;
     height: auto;
-    /* margin: 1rem; */
 }
 #small{
     padding-bottom: 2rem;
@@ -33,5 +31,5 @@
     padding: 0.5em;
 }
 .carousel-right{
-    width: 100%
+   
 }
